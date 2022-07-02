@@ -1,21 +1,22 @@
 package br.com.infnet.projetofinal.empresaAcme;
 
+import java.util.List;
+
 abstract class Funcionario {
-    public static final int O = 1;
-    public static final int A = 2;
-    public static final int B = 3;
-    public static final int AB = 4;
+    public GrupoSanguineo grupoSanguineo;
 
-    public int grupoSanguineo;
+    private Long matricula;
 
-    public Funcionario(int grupoSanguineo) {
+    private List<Cursos> cursos;
+
+    public Funcionario(GrupoSanguineo grupoSanguineo) {
         this.grupoSanguineo = grupoSanguineo;
     }
 
     private String id;
     private String nome;
     private String sobrenome;
-    private Long tempoDeServicoEMAnos;
+    private Long tempoDeServicoEmAnos;
 
     public String logradouro;
     public String cidade;
@@ -23,15 +24,20 @@ abstract class Funcionario {
     public String cep;
     public String bairro;
 
-
-    public String numeroConselho;
-
-    public Long getTempoDeServicoEMAnos() {
-        return tempoDeServicoEMAnos;
+    public Long getTempoDeServicoEmAnos() {
+        return tempoDeServicoEmAnos;
     }
 
-    public void setTempoDeServicoEMAnos(Long tempoDeServicoEMAnos) {
-        this.tempoDeServicoEMAnos = tempoDeServicoEMAnos;
+    public void setTempoDeServicoEmAnos(Long tempoDeServicoEmAnos) {
+        this.tempoDeServicoEmAnos = tempoDeServicoEmAnos;
+    }
+
+    public Long getMaticula() {
+        return matricula;
+    }
+
+    public void setMatricula(Long matricula) {
+        this.matricula = matricula;
     }
 
     public String getId() {
@@ -57,7 +63,17 @@ abstract class Funcionario {
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
-    public abstract Double calculaBonusEngenheiro();
 
-    public abstract String getNumeroConselho();
+    public List<Cursos> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Cursos> cursos) {
+
+        this.cursos = cursos;
+    }
+
+    public Integer getQuantidadeEmpregadosFabrica(){
+        return 34;
+    }
 }
