@@ -7,7 +7,7 @@ abstract class Funcionario {
 
     private Long matricula;
 
-    private List<Cursos> cursos;
+    private List<Curso> cursos;
 
     public Funcionario(GrupoSanguineo grupoSanguineo) {
         this.grupoSanguineo = grupoSanguineo;
@@ -64,13 +64,15 @@ abstract class Funcionario {
         this.sobrenome = sobrenome;
     }
 
-    public List<Cursos> getCursos() {
+    public List<Curso> getCursos() {
         return cursos;
     }
 
-    public void setCursos(List<Cursos> cursos) {
+    public void addCursos(List<Curso> cursos) {
 
-        this.cursos = cursos;
+        for (Curso curso: cursos) {
+            this.cursos.add(curso);
+        }
     }
 
     public Integer getQuantidadeEmpregadosFabrica(){

@@ -1,7 +1,6 @@
 package br.com.infnet.projetofinal.empresaAcme;
 
 import java.util.Date;
-import java.util.List;
 
 public class Engenheiro extends Funcionario{
 
@@ -24,7 +23,7 @@ public class Engenheiro extends Funcionario{
         Integer aprovado = -1;
 
         if (fluenteEmIngles) {
-            for (Cursos curso : getCursos()) {
+            for (Curso curso : getCursos()) {
                 if((curso.isMestrado() || curso.isDoutorado()) && curso.isAprovado()) aprovado = 1;
             }
         }

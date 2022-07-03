@@ -1,18 +1,18 @@
 package br.com.infnet.projetofinal.empresaAcme;
 
-public class Cursos {
+public class Curso {
     private String nome;
     private Integer nota;
 
     private TipoCurso tipoCurso;
 
-    public Cursos(String nome, Integer nota) {
+    public Curso(String nome, Integer nota) {
         this.nome = nome;
         this.nota = nota;
         this.tipoCurso = null;
     }
 
-    public Cursos(String nome, Integer nota, TipoCurso tipoCurso) {
+    public Curso(String nome, Integer nota, TipoCurso tipoCurso) {
         this.nome = nome;
         this.nota = nota;
         this.tipoCurso = tipoCurso;
